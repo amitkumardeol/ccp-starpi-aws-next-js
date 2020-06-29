@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "challenges",
+  "info": {
+    "name": "challenges",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "event": {
+      "model": "events",
+      "via": "challenges"
+    }
+  }
+}

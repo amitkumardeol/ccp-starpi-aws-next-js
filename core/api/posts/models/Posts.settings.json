@@ -1,0 +1,37 @@
+{
+  "connection": "default",
+  "collectionName": "posts",
+  "info": {
+    "name": "posts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "postTitle": {
+      "type": "string",
+      "required": true
+    },
+    "postHeroImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "postDescription": {
+      "type": "text"
+    },
+    "dishes": {
+      "collection": "dish",
+      "via": "post"
+    },
+    "postSummaryContent": {
+      "type": "text"
+    }
+  }
+}

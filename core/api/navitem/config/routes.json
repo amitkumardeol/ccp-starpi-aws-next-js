@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/navitems",
+      "handler": "Navitem.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/navitems/count",
+      "handler": "Navitem.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/navitems/:id",
+      "handler": "Navitem.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/navitems",
+      "handler": "Navitem.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/navitems/:id",
+      "handler": "Navitem.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/navitems/:id",
+      "handler": "Navitem.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

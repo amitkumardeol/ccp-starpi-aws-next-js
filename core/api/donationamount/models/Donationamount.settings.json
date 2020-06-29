@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "donationamounts",
+  "info": {
+    "name": "donationamount",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "Amount": {
+      "type": "integer",
+      "default": "5",
+      "min": 2
+    },
+    "donationmodule": {
+      "model": "donationmodule",
+      "via": "donationamounts"
+    }
+  }
+}

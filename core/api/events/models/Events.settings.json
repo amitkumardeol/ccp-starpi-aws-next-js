@@ -1,0 +1,51 @@
+{
+  "connection": "default",
+  "collectionName": "events",
+  "info": {
+    "name": "events",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "eventTitle": {
+      "type": "string"
+    },
+    "eventSubTitle": {
+      "type": "text"
+    },
+    "eventSummary": {
+      "type": "text"
+    },
+    "eventDetail": {
+      "type": "text"
+    },
+    "eventStartDate": {
+      "type": "date"
+    },
+    "eventEndDate": {
+      "type": "date"
+    },
+    "eventDifficulty": {
+      "type": "string"
+    },
+    "eventLocation": {
+      "type": "string"
+    },
+    "challenges": {
+      "collection": "challenges",
+      "via": "event"
+    },
+    "eventHeroImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

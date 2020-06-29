@@ -1,0 +1,49 @@
+{
+  "connection": "default",
+  "collectionName": "UrlItems",
+  "info": {
+    "name": "UrlItem",
+    "description": "Link item for reusability"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "linkTarget": {
+      "type": "string",
+      "required": true
+    },
+    "linkItemType": {
+      "enum": [
+        "Internal",
+        "Image",
+        "External"
+      ],
+      "type": "enumeration"
+    },
+    "itemAltText": {
+      "type": "string"
+    },
+    "containerblock": {
+      "model": "containerblock",
+      "via": "UrlItems"
+    },
+    "donationmodule": {
+      "model": "donationmodule",
+      "via": "UrlItems"
+    },
+    "navitem": {
+      "model": "navitem",
+      "via": "UrlItems"
+    }
+  }
+}

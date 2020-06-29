@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/containerblocks",
+      "handler": "Containerblock.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/containerblocks/count",
+      "handler": "Containerblock.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/containerblocks/:id",
+      "handler": "Containerblock.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/containerblocks",
+      "handler": "Containerblock.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/containerblocks/:id",
+      "handler": "Containerblock.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/containerblocks/:id",
+      "handler": "Containerblock.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "navitems",
+  "info": {
+    "name": "navitem",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "navType": {
+      "enum": [
+        "Header",
+        "Contact_us",
+        "Info",
+        "Blog",
+        "Donate",
+        "Logo"
+      ],
+      "type": "enumeration"
+    },
+    "Label": {
+      "type": "string"
+    },
+    "UrlItems": {
+      "collection": "urlitem",
+      "via": "navitem"
+    }
+  }
+}

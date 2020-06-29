@@ -1,0 +1,65 @@
+{
+  "connection": "default",
+  "collectionName": "pages",
+  "info": {
+    "name": "pages",
+    "description": "This will be used as a top-level object in our mobile app."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "BannerImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "Types": {
+      "enum": [
+        "Article",
+        "News",
+        "Page",
+        "Event"
+      ],
+      "type": "enumeration"
+    },
+    "CreationDate": {
+      "type": "date"
+    },
+    "Body": {
+      "type": "text"
+    },
+    "Excerpt": {
+      "type": "text"
+    },
+    "Status": {
+      "enum": [
+        "draft",
+        "review",
+        "publish"
+      ],
+      "type": "enumeration"
+    },
+    "category": {
+      "model": "category",
+      "via": "pages"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "pages"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/donationfrequencies",
+      "handler": "Donationfrequency.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/donationfrequencies/count",
+      "handler": "Donationfrequency.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/donationfrequencies/:id",
+      "handler": "Donationfrequency.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/donationfrequencies",
+      "handler": "Donationfrequency.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/donationfrequencies/:id",
+      "handler": "Donationfrequency.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/donationfrequencies/:id",
+      "handler": "Donationfrequency.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

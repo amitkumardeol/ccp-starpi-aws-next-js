@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "donationmodules",
+  "info": {
+    "name": "donationmodule",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "text"
+    },
+    "UrlItems": {
+      "collection": "urlitem",
+      "via": "donationmodule"
+    },
+    "donationfrequencies": {
+      "collection": "donationfrequency",
+      "via": "donationmodule"
+    },
+    "donationamounts": {
+      "collection": "donationamount",
+      "via": "donationmodule"
+    }
+  }
+}

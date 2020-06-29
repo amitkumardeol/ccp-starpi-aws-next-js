@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "containerblocks",
+  "info": {
+    "name": "containerblock",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Label": {
+      "required": true,
+      "type": "string"
+    },
+    "Body": {
+      "required": true,
+      "type": "text"
+    },
+    "UrlItems": {
+      "collection": "urlitem",
+      "via": "containerblock"
+    },
+    "containerblocktype": {
+      "enum": [
+        "Hero",
+        "Paragraph",
+        "Statistics",
+        "Blog"
+      ],
+      "type": "enumeration"
+    }
+  }
+}
